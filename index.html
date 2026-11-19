@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Proyecto Aula Voces de la Salud: comunicación intercultural y biofísica en el laboratorio clínico.">
+<title>Voces de la Salud | Proyecto Aula</title>
+<style>
+:root{--navy:#123b5d;--blue:#176b87;--teal:#20b8ad;--pale:#eaf7f8;--bg:#f3f8fb;--ink:#263b4a;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header{padding:58px 20px 52px;text-align:center;color:white;background:linear-gradient(90deg,rgba(10,43,68,.93),rgba(15,91,112,.78)),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMzYwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciPjxzdG9wIHN0b3AtY29sb3I9IiMxMjNiNWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyMGI4YWQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjM2MCIgcng9IjI0IiBmaWxsPSIjZWFmN2Y4Ii8+PHJlY3QgeD0iNjEwIiB5PSI1MCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyNTAiIHJ4PSIxOCIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNNjkwIDEwMGg0MHY2MGg2MHY0MGgtNjB2NjBoLTQwdi02MGgtNjB2LTQwaDYweiIgZmlsbD0iIzIwYjhhZCIvPjxjaXJjbGUgY3g9IjI2MCIgY3k9IjExMCIgcj0iNDgiIGZpbGw9IiNlOGJjOWEiLz48cGF0aCBkPSJNMjEwIDExNXEtNS03MCA1MC03MHQ1MCA3MGwtMTgtMjdxLTM1LTI1LTY4IDB6IiBmaWxsPSIjMjYzYjRhIi8+PHBhdGggZD0iTTE2MCAzMTBxNS0xNDUgMTAwLTE0NXQxMDAgMTQ1IiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iNDMwIiBjeT0iMTI1IiByPSI0MCIgZmlsbD0iI2M5OGU2OSIvPjxwYXRoIGQ9Ik0zOTAgMTI1cS0zLTYwIDQwLTYwdDQwIDYwbC0xNC0yNXEtMjYtMTYtNTIgMHoiIGZpbGw9IiMyNjNiNGEiLz48cGF0aCBkPSJNMzU1IDMxMHEzLTEyMCA3NS0xMjB0NzUgMTIwIiBmaWxsPSIjMTc2Yjg3Ii8+PC9zdmc+') center/cover no-repeat}
+header .eyebrow{display:inline-block;padding:5px 13px;border:1px solid #ffffff80;border-radius:30px;font-size:.86rem}
+header h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:18px auto 12px;max-width:900px}
+header p{max-width:800px;margin:8px auto}
+header .languages{font-weight:bold;letter-spacing:.08em;margin-top:18px}
+.photo-banner{width:100%;height:230px;object-fit:cover;border-radius:14px;margin:8px 0 20px;display:block}
+.card-photo{width:100%;height:135px;object-fit:cover;border-radius:9px;margin-bottom:12px;display:block}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}
+.photo-grid img{width:100%;height:170px;object-fit:cover;border-radius:12px}
+.photo-caption{font-size:.88rem;color:#516675;margin-top:-7px;margin-bottom:15px}
+nav{position:sticky;top:0;z-index:10;background:#fff;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;padding:13px 16px;box-shadow:0 3px 15px #123b5d14}
+nav a{font-size:.93rem;text-decoration:none;color:var(--navy);font-weight:bold}
+nav a:hover{color:var(--teal)}
+main{width:min(1050px,calc(100% - 32px));margin:32px auto 48px}
+section{background:white;padding:clamp(20px,4vw,32px);margin-bottom:24px;border-radius:17px;box-shadow:0 5px 22px #123b5d0c;scroll-margin-top:85px}
+h2{font-size:1.55rem;color:var(--navy);border-left:5px solid var(--teal);padding-left:13px;margin-bottom:17px}
+h3{color:var(--blue);font-size:1.1rem;margin:19px 0 8px}
+p{margin-bottom:12px}
+ul,ol{padding-left:24px;margin:8px 0 15px}
+li{margin-bottom:7px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin-top:18px}
+.card{padding:19px;background:#eff9f8;border:1px solid #d8efed;border-top:4px solid var(--teal);border-radius:13px}
+.card h3{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.callout{padding:17px 19px;background:#edf5fb;border-radius:12px;border-left:4px solid var(--blue);margin:14px 0}
+.pill{display:inline-block;background:#dcf5f1;color:#116c67;border-radius:30px;padding:4px 10px;font-size:.82rem;margin:3px}
+.step{padding:15px 0;border-bottom:1px solid #e6eef2}
+.step:last-child{border-bottom:0}
+
+.download-link{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:11px 17px;border-radius:9px;font-weight:bold;margin:4px 0 16px}
+.download-link:hover{background:var(--blue)}
+.pdf-frame{width:100%;height:760px;border:1px solid #d9e5eb;border-radius:12px;overflow:hidden;background:#f7fafc}
+.pdf-frame iframe{width:100%;height:100%;border:0}
+@media(max-width:600px){.pdf-frame{height:560px}}
+footer{background:var(--navy);color:white;text-align:center;padding:28px 18px}
+footer p{margin:5px 0}
+.small{font-size:.92rem;color:#516675}
+@media(max-width:600px){header{padding:42px 17px}nav{gap:8px 13px}nav a{font-size:.84rem}main{width:calc(100% - 22px);margin-top:18px}section{padding:20px;border-radius:13px}h2{font-size:1.35rem}}
+</style>
+</head>
+<body>
+<header>
+  <span class="eyebrow">PROYECTO AULA · CECyT No. 6</span>
+  <h1>Voces de la Salud</h1>
+  <p><strong>Grupo:</strong> 3IM4 · Clínicos</p>
+  <p><strong>Profesor de Física:</strong> Santiago Guerrera Sergio Iván</p>
+  <p><strong>Protocolo de Comunicación Intercultural y Biofísica en el Laboratorio Clínico</strong></p>
+  <p class="languages">NÁHUATL · ZÀA · ESPAÑOL</p>
+</header>
+
+<nav aria-label="Navegación principal">
+  <a href="#proyecto">Proyecto</a>
+  <a href="#delimitacion">Delimitación</a>
+  <a href="#manual">Guía clínica</a>
+  <a href="#audios">Audioguías</a>
+  <a href="#equipos">Equipos</a>
+  <a href="#vocabulario">Vocabulario clínico</a>
+</nav>
+
+<main>
+<section id="proyecto">
+  <h2>01. Presentación del proyecto</h2>
+  <p><strong>Voces de la Salud</strong> propone desarrollar recursos de comunicación intercultural para apoyar al personal del laboratorio clínico al brindar instrucciones preanalíticas a pacientes hablantes de lenguas originarias.</p>
+  <p>El proyecto combina adaptación lingüística, validación con hablantes, fundamentos de Física y Fisiología Clínica, guías impresas y herramientas digitales de audio para facilitar instrucciones claras, respetuosas y comprensibles.</p>
+  <img class="photo-banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMzYwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciPjxzdG9wIHN0b3AtY29sb3I9IiMxMjNiNWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyMGI4YWQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjM2MCIgcng9IjI0IiBmaWxsPSIjZWFmN2Y4Ii8+PHJlY3QgeD0iNjEwIiB5PSI1MCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyNTAiIHJ4PSIxOCIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNNjkwIDEwMGg0MHY2MGg2MHY0MGgtNjB2NjBoLTQwdi02MGgtNjB2LTQwaDYweiIgZmlsbD0iIzIwYjhhZCIvPjxjaXJjbGUgY3g9IjI2MCIgY3k9IjExMCIgcj0iNDgiIGZpbGw9IiNlOGJjOWEiLz48cGF0aCBkPSJNMjEwIDExNXEtNS03MCA1MC03MHQ1MCA3MGwtMTgtMjdxLTM1LTI1LTY4IDB6IiBmaWxsPSIjMjYzYjRhIi8+PHBhdGggZD0iTTE2MCAzMTBxNS0xNDUgMTAwLTE0NXQxMDAgMTQ1IiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iNDMwIiBjeT0iMTI1IiByPSI0MCIgZmlsbD0iI2M5OGU2OSIvPjxwYXRoIGQ9Ik0zOTAgMTI1cS0zLTYwIDQwLTYwdDQwIDYwbC0xNC0yNXEtMjYtMTYtNTIgMHoiIGZpbGw9IiMyNjNiNGEiLz48cGF0aCBkPSJNMzU1IDMxMHEzLTEyMCA3NS0xMjB0NzUgMTIwIiBmaWxsPSIjMTc2Yjg3Ii8+PC9zdmc+" alt="Profesionales de salud trabajando en un entorno clínico">
+  <div class="cards">
+    <article class="card"><img class="card-photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgcng9IjIwIiBmaWxsPSIjZWZmOWY4Ii8+PGNpcmNsZSBjeD0iMjEwIiBjeT0iOTUiIHI9IjQyIiBmaWxsPSIjZTliZDliIi8+PHBhdGggZD0iTTE2OCAxMDBxLTUtNjAgNDItNjB0NDIgNjBsLTE1LTIycS0yNy0xNy01NCAweiIgZmlsbD0iIzI2M2I0YSIvPjxwYXRoIGQ9Ik0xMzAgMjgwcTUtMTIwIDgwLTEyMHQ4MCAxMjAiIGZpbGw9IiMyMGI4YWQiLz48Y2lyY2xlIGN4PSIzODUiIGN5PSIxMDUiIHI9IjQwIiBmaWxsPSIjYmQ4MzVlIi8+PHBhdGggZD0iTTM0NSAxMDVxLTMtNjAgNDAtNjB0NDAgNjBsLTE1LTI0cS0yNS0xNS01MCAweiIgZmlsbD0iIzI2M2I0YSIvPjxwYXRoIGQ9Ik0zMTAgMjgwcTUtMTEyIDc1LTExMnQ3NSAxMTIiIGZpbGw9IiM3OWI5YzEiLz48cGF0aCBkPSJNMjU1IDE5MHEzMC0zMCA2MCAwIiBzdHJva2U9IiMxNzZiODciIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" alt="Comunicación entre personas"><h3>Comunicación intercultural</h3><p>Favorecer una atención respetuosa de la diversidad lingüística y cultural.</p></article>
+    <article class="card"><img class="card-photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgcng9IjIwIiBmaWxsPSIjZWRmNWZiIi8+PHJlY3QgeD0iNjUiIHk9IjU1IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIwNSIgcng9IjE1IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjkyIiB5PSI4MyIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIxNiIgcng9IjYiIGZpbGw9IiMyMGI4YWQiLz48cmVjdCB4PSI5MiIgeT0iMTIwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjE2IiByeD0iNiIgZmlsbD0iI2I2ZGNlMSIvPjxyZWN0IHg9IjkyIiB5PSIxNTciIHdpZHRoPSI5MCIgaGVpZ2h0PSIxNiIgcng9IjYiIGZpbGw9IiNiNmRjZTEiLz48cGF0aCBkPSJNMzUwIDY1aDU1djY4bDI1IDQwdjcwcTAgMTUtMTUgMTVoLTc1cS0xNSAwLTE1LTE1di03MGwyNS00MHoiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMxNzZiODciIHN0cm9rZS13aWR0aD0iOCIvPjxwYXRoIGQ9Ik0zMzUgMTk1aDg1djQ4cTAgOC0xMCA4aC02NXEtMTAgMC0xMC04eiIgZmlsbD0iIzIwYjhhZCIvPjxjaXJjbGUgY3g9IjUwMCIgY3k9IjEwMCIgcj0iMzIiIGZpbGw9IiMyMGI4YWQiLz48cGF0aCBkPSJNNTAwIDgwdjQwbS0yMC0yMGg0MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" alt="Material de laboratorio clínico"><h3>Precisión clínica</h3><p>Apoyar la preparación, toma, recolección y conservación adecuadas de muestras.</p></article>
+    <article class="card"><img class="card-photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgcng9IjIwIiBmaWxsPSIjZTdmNWY3Ii8+PHJlY3QgeD0iODUiIHk9IjQ1IiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjIwMCIgcng9IjE1IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjEwNSIgeT0iNjUiIHdpZHRoPSIyOTAiIGhlaWdodD0iMTYwIiByeD0iOCIgZmlsbD0iI2RmZjNmNCIvPjxwYXRoIGQ9Ik0xNDUgMTgwbDU1LTU1IDU1IDQwIDcwLTY1IDQwIDMwIiBzdHJva2U9IiMyMGI4YWQiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjIxMCIgeT0iMjQ1IiB3aWR0aD0iODAiIGhlaWdodD0iMTIiIHJ4PSI1IiBmaWxsPSIjMTc2Yjg3Ii8+PGNpcmNsZSBjeD0iNTAwIiBjeT0iMTM1IiByPSI0OCIgZmlsbD0iIzIwYjhhZCIvPjxwYXRoIGQ9Ik00ODUgMTEwbDM1IDI1LTM1IDI1eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=" alt="Tecnología aplicada al trabajo científico"><h3>Innovación tecnológica</h3><p>Facilitar el acceso a instrucciones mediante archivos de audio y códigos QR.</p></article>
+  </div>
+</section>
+
+<section id="delimitacion">
+  <h2>02. Delimitación del tema</h2>
+  <p>El proyecto se limita exclusivamente a la traducción, adaptación lingüística y desarrollo de audios de las instrucciones críticas preanalíticas y los 24 términos técnicos seleccionados de los programas vigentes de Fisiología Clínica, vinculados con los principios físicos abordados en la unidad de aprendizaje de Física.</p>
+  <h3>Variantes lingüísticas contempladas</h3>
+  <div><span class="pill">Náhuatl del estado de Puebla</span><span class="pill">Zàa del Istmo (Didxazàa)</span></div>
+  <h3>Espacio de trabajo</h3>
+  <p>La fase de diseño, modelado tridimensional y grabación multimedia se realizará en los laboratorios de Física del CECyT No. 6 “Miguel Othón de Mendizábal”. La prueba piloto y la validación de campo se proyectan para el área de toma de muestras del Laboratorio Clínico de la misma institución.</p>
+  <div class="callout"><strong>Duración proyectada:</strong> trabajo transversal durante las 12 semanas previas a la presentación formal del Proyecto Aula.</div>
+</section>
+
+<section id="manual">
+  <h2>03. Guía clínica bilingüe de bolsillo</h2>
+  <img class="photo-banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMzYwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjM2MCIgcng9IjI0IiBmaWxsPSIjZWRmNWZiIi8+PHJlY3QgeD0iMTgwIiB5PSI1NSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyNTAiIHJ4PSIxOCIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSIyMDAiIHk9Ijc4IiB3aWR0aD0iNjAiIGhlaWdodD0iMjgiIHJ4PSI1IiBmaWxsPSIjMjBiOGFkIi8+PHBhdGggZD0iTTIwMCAxNzBoNjB2MTA1cTAgMTItMTIgMTJoLTM2cS0xMiAwLTEyLTEyeiIgZmlsbD0iI2Q5OTE5MSIvPjxwYXRoIGQ9Ik00NDAgNjVoNjB2NzBsMjggNDJ2MTAwcTAgMTUtMTUgMTVoLTg2cS0xNSAwLTE1LTE1di0xMDBsMjgtNDJ6IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMTc2Yjg3IiBzdHJva2Utd2lkdGg9IjgiLz48cGF0aCBkPSJNNDI1IDIyMGg5MHY1NXEwIDEwLTEwIDEwaC03MHEtMTAgMC0xMC0xMHoiIGZpbGw9IiNkOTkxOTEiLz48Y2lyY2xlIGN4PSI2NzAiIGN5PSIxNDAiIHI9IjU1IiBmaWxsPSIjMjBiOGFkIi8+PHBhdGggZD0iTTY0NSAxNDBsMTggMTggMzYtNDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==" alt="Toma de muestra para análisis clínico">
+  <p>Se elaborará un manual técnico impreso en formato media carta y una versión digital en PDF, con tipografía legible y de alta visibilidad para entornos clínicos.</p>
+  <h3>Organización por unidades</h3>
+  <div class="cards">
+    <article class="card"><h3>Circulación</h3><p>Vocabulario e instrucciones vinculadas con extracción de sangre venosa y capilar, y toma de signos vitales cardiacos.</p></article>
+    <article class="card"><h3>Secreciones y excreciones</h3><p>Protocolos para recolección higiénica de orina, heces y muestras digestivas y respiratorias.</p></article>
+    <article class="card"><h3>Sistema neuroendocrino</h3><p>Términos técnicos y procedimientos relacionados con las funciones nerviosas y hormonales.</p></article>
+  </div>
+  <h3>Contenido de cada sección</h3>
+  <ul>
+    <li>Frase instructiva o término técnico en español.</li>
+    <li>Traducción validada al náhuatl y a la lengua Zàa del Istmo.</li>
+    <li>Transcripción fonética simplificada para orientar la pronunciación del laboratorista hispanohablante.</li>
+    <li>Sustento físico-fisiológico de la instrucción, por ejemplo, cómo una recolección inadecuada puede alterar el pH urinario o cómo la hemólisis puede afectar una muestra.</li>
+  </ul>
+  <div class="callout"><strong>Importante:</strong> las traducciones y las guías fonéticas deberán validarse con hablantes competentes o especialistas antes de utilizarse con pacientes.</div>
+</section>
+
+<section id="audios">
+  <h2>04. Sistema de audioguías clínicas automatizadas</h2>
+  <div class="photo-grid"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgcng9IjIwIiBmaWxsPSIjZWFmN2Y4Ii8+PHJlY3QgeD0iOTUiIHk9IjQwIiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjIyMCIgcng9IjIwIiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjExMiIgeT0iNjIiIHdpZHRoPSI5NiIgaGVpZ2h0PSIxNjAiIHJ4PSI4IiBmaWxsPSIjZGZmM2Y0Ii8+PGNpcmNsZSBjeD0iMTYwIiBjeT0iMjM4IiByPSIxMCIgZmlsbD0iIzIwYjhhZCIvPjxwYXRoIGQ9Ik0zMDAgMTA1cTM1LTM1IDcwIDBtLTU1IDI1cTIwLTIwIDQwIDBtLTI1IDI1cTUtNSAxMCAwIiBzdHJva2U9IiMxNzZiODciIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjM2MCIgY3k9IjE5MCIgcj0iMjIiIGZpbGw9IiMyMGI4YWQiLz48cmVjdCB4PSI0NDAiIHk9IjY1IiB3aWR0aD0iOTAiIGhlaWdodD0iMTU1IiByeD0iMTIiIGZpbGw9IndoaXRlIi8+PHJlY3QgeD0iNDU2IiB5PSI4MiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iI2RmZjNmNCIvPjxwYXRoIGQ9Ik00NjUgOTFsNDAgNDBtMC00MGwtNDAgNDAiIHN0cm9rZT0iIzIwYjhhZCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PC9zdmc+" alt="Equipo de grabación de audio"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgcng9IjIwIiBmaWxsPSIjZTdmNWY3Ii8+PHJlY3QgeD0iODUiIHk9IjQ1IiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjIwMCIgcng9IjE1IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjEwNSIgeT0iNjUiIHdpZHRoPSIyOTAiIGhlaWdodD0iMTYwIiByeD0iOCIgZmlsbD0iI2RmZjNmNCIvPjxwYXRoIGQ9Ik0xNDUgMTgwbDU1LTU1IDU1IDQwIDcwLTY1IDQwIDMwIiBzdHJva2U9IiMyMGI4YWQiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjIxMCIgeT0iMjQ1IiB3aWR0aD0iODAiIGhlaWdodD0iMTIiIHJ4PSI1IiBmaWxsPSIjMTc2Yjg3Ii8+PGNpcmNsZSBjeD0iNTAwIiBjeT0iMTM1IiByPSI0OCIgZmlsbD0iIzIwYjhhZCIvPjxwYXRoIGQ9Ik00ODUgMTEwbDM1IDI1LTM1IDI1eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=" alt="Uso de tecnología digital"></div>
+  <p>Se producirán archivos de audio digital en formato MP3 o WAV, grabados en un espacio libre de ruido y con voz clara, pausada, empática y profesional.</p>
+  <h3>¿Cómo funcionará?</h3>
+  <div class="step"><strong>1. Grabación:</strong> se registrarán las instrucciones en las lenguas contempladas, una vez revisadas y validadas.</div>
+  <div class="step"><strong>2. Almacenamiento:</strong> los audios se alojarán en un repositorio digital en la nube.</div>
+  <div class="step"><strong>3. Código QR:</strong> se generará una planilla de códigos QR para identificar y abrir cada pista.</div>
+  <div class="step"><strong>4. Uso clínico:</strong> el personal podrá escanear el código desde recepción o el cubículo de flebotomía y reproducir la instrucción frente al paciente.</div>
+</section>
+
+<section id="equipos">
+  <h2>05. Forma de trabajo: células de investigación e innovación clínica</h2>
+  <img class="photo-banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMzYwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjM2MCIgcng9IjI0IiBmaWxsPSIjZWFmN2Y4Ii8+PGc+PGNpcmNsZSBjeD0iMjYwIiBjeT0iMTEwIiByPSI0MiIgZmlsbD0iI2VhYzA5ZSIvPjxwYXRoIGQ9Ik0yMDUgMzEwcTUtMTM1IDU1LTEzNXQ1NSAxMzUiIGZpbGw9IiMyMGI4YWQiLz48Y2lyY2xlIGN4PSI0NTAiIGN5PSIxMTAiIHI9IjQyIiBmaWxsPSIjYmQ4MzVlIi8+PHBhdGggZD0iTTM5NSAzMTBxNS0xMzUgNTUtMTM1dDU1IDEzNSIgZmlsbD0iIzc5YjljMSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9IjExMCIgcj0iNDIiIGZpbGw9IiNlYWMwOWUiLz48cGF0aCBkPSJNNTg1IDMxMHE1LTEzNSA1NS0xMzV0NTUgMTM1IiBmaWxsPSIjMTc2Yjg3Ii8+PHBhdGggZD0iTTI2MCAyMDVsMTkwIDQwIDE5MC00MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI5IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L2c+PC9zdmc+" alt="Equipo de trabajo en un laboratorio">
+  <p>El grupo se organizará en cuatro células de trabajo, en coordinación con las demás unidades de aprendizaje.</p>
+  <div class="cards">
+    <article class="card"><h3>1. Célula Hematológica y Cardiovascular</h3><p>Desarrollará vocabulario y frases preanalíticas para extracción de sangre venosa y capilar, así como para la toma de signos vitales cardiacos.</p></article>
+    <article class="card"><h3>2. Célula Metabólica y de Fluidos</h3><p>Desarrollará protocolos bilingües para la recolección higiénica de orina, heces, secreciones digestivas y respiratorias.</p></article>
+    <article class="card"><h3>3. Célula Endocrina y Reproductiva</h3><p>Elaborará protocolos bilingües con enfoque bioético, equidad de género y respeto integral para citología vaginal, exudados uretrales y recolección de semen.</p></article>
+    <article class="card"><h3>4. Célula Tecnológica y de Validación Fonética</h3><p>Integrará las investigaciones, contactará validadores lingüísticos, organizará el repositorio en la nube, diseñará las fichas de bolsillo, editará los audios y generará la matriz final de códigos QR.</p></article>
+  </div>
+</section>
+
+
+
+<section id="vocabulario" class="card">
+  <h2>06. Vocabulario clínico y anatómico trilingüe</h2>
+  <div class="vocab-table-wrap">
+    <table class="vocab-table vocab-table-clean">
+      <thead><tr><th>Español</th><th>Zàa (Didxazàa del Istmo)</th><th>English</th></tr></thead>
+      <tbody>
+<tr><td>Sangre</td><td>Rini</td><td>Blood</td></tr>
+<tr><td>Plasma Sanguíneo</td><td>Nisa Guchi Rini</td><td>Blood Plasma</td></tr>
+<tr><td>Vena</td><td>Xneza Rini Xiñá’</td><td>Vein</td></tr>
+<tr><td>Arteria</td><td>Xneza Rini Nagá’ yáa</td><td>Artery</td></tr>
+<tr><td>Corazón</td><td>Ladxidó’</td><td>Heart</td></tr>
+<tr><td>Anemia</td><td>Zèegaa Lú / Nagaa Lú</td><td>Anemia</td></tr>
+<tr><td>Hematoma / Cárdeno</td><td>Nagàa</td><td>Hematoma / Bruise</td></tr>
+<tr><td>Presión Alta (Hipertensión)</td><td>Guinda Guinda Luguiá’</td><td>High Blood Pressure</td></tr>
+<tr><td>Presión Baja (Hipotensión)</td><td>Guinda Guinda Huaxié’</td><td>Low Blood Pressure</td></tr>
+<tr><td>Presión (fuerza / pulsación)</td><td>Guinda Guinda</td><td>Pressure / Pulsation</td></tr>
+<tr><td>Saliva</td><td>Nisa Xhinni</td><td>Saliva</td></tr>
+<tr><td>Saliva (baba)</td><td>Nisa roonde</td><td>Drool / Saliva</td></tr>
+<tr><td>Moco</td><td>Guudxi’</td><td>Mucus</td></tr>
+<tr><td>Flema / Esputo</td><td>Nisa Yuuba’</td><td>Phlegm / Sputum</td></tr>
+<tr><td>Gotas de Flügge (Flujo respiratorio)</td><td>La’pa’ Nisa Ruaa</td><td>Respiratory Droplets (Flügge)</td></tr>
+<tr><td>Secreción Vaginal</td><td>Nisa Nde’</td><td>Vaginal Discharge</td></tr>
+<tr><td>Semen</td><td>Nisa Zàa / Nisa Rini / Nisa Laana’</td><td>Semen / Seminal Fluid</td></tr>
+<tr><td>Lágrimas</td><td>Nisa Lú</td><td>Tears</td></tr>
+<tr><td>Seno / Glándula Mamaria</td><td>Xidxi</td><td>Breast / Mammary Gland</td></tr>
+<tr><td>Pus / Exudado Purulento</td><td>Guudxi’ Guidxu</td><td>Pus / Purulent Exudate</td></tr>
+<tr><td>Orina</td><td>Nisa Xquixhi</td><td>Urine</td></tr>
+<tr><td>Riñón</td><td>La’dxi’ Guie</td><td>Kidney</td></tr>
+<tr><td>Vejiga Urinaria</td><td>Xquixhi</td><td>Urinary Bladder</td></tr>
+<tr><td>Uretra</td><td>Neza Xquixhi</td><td>Urethra</td></tr>
+<tr><td>Estómago</td><td>Ndaani’ / Gixhe laagu’</td><td>Stomach</td></tr>
+<tr><td>Hígado</td><td>La’dxi’ Gueta</td><td>Liver</td></tr>
+<tr><td>Vesícula Biliar</td><td>Xculá’</td><td>Gallbladder</td></tr>
+<tr><td>Intestino Grueso</td><td>Xhiee Ró’</td><td>Large Intestine</td></tr>
+<tr><td>Intestino Delgado</td><td>Xhiee Lase’</td><td>Small Intestine</td></tr>
+<tr><td>Moco Fecal</td><td>Guudxi’</td><td>Fecal Mucus</td></tr>
+<tr><td>Diarrea Líquida</td><td>Gui’ Nanisa</td><td>Diarrhea</td></tr>
+<tr><td>Flatulencia / Gas</td><td>Do’pe</td><td>Flatulence / Gas</td></tr>
+<tr><td>Sudor</td><td>Nisa Luna</td><td>Sweat / Perspiration</td></tr>
+<tr><td>Ano</td><td>Guiiru’ Gui’</td><td>Anus</td></tr>
+<tr><td>Cabeza</td><td>Guique</td><td>Head</td></tr>
+<tr><td>Cabello</td><td>Guicha Guique</td><td>Hair</td></tr>
+<tr><td>Frente</td><td>Lucuá</td><td>Forehead</td></tr>
+<tr><td>Ojo</td><td>Guie Lú</td><td>Eye</td></tr>
+<tr><td>Párpado</td><td>Guidi Xiici</td><td>Eyelid</td></tr>
+<tr><td>Ceja</td><td>Guicha Laga</td><td>Eyebrow</td></tr>
+<tr><td>Pestaña</td><td>Guicha Xiici</td><td>Eyelash</td></tr>
+<tr><td>Lagrimal</td><td>Guiiru’ Biaalú</td><td>Tear Duct / Lacrimal</td></tr>
+<tr><td>Nariz</td><td>Xii</td><td>Nose</td></tr>
+<tr><td>Vello Nasal</td><td>Guicha Xii</td><td>Nasal Hair</td></tr>
+<tr><td>Oreja</td><td>Diaga</td><td>Ear</td></tr>
+<tr><td>Mejilla</td><td>Xhaga</td><td>Cheek</td></tr>
+<tr><td>Mentón</td><td>Xhigui</td><td>Chin</td></tr>
+<tr><td>Boca</td><td>Ruaa</td><td>Mouth</td></tr>
+<tr><td>Labio</td><td>Guidi Ruaa</td><td>Lip</td></tr>
+<tr><td>Cuello</td><td>Yanni</td><td>Neck</td></tr>
+<tr><td>Garganta</td><td>Ndaani’ Yanni</td><td>Throat</td></tr>
+<tr><td>Nuca</td><td>Xayanni</td><td>Nape / Back of Neck</td></tr>
+<tr><td>Lengua</td><td>Ludxi</td><td>Tongue</td></tr>
+<tr><td>Úvula</td><td>Beza Yanni</td><td>Uvula</td></tr>
+<tr><td>Amígdala</td><td>Xubaró’ nuu yanni</td><td>Tonsil</td></tr>
+<tr><td>Paladar</td><td>Dxíge</td><td>Palate</td></tr>
+<tr><td>Diente</td><td>Laya</td><td>Tooth</td></tr>
+<tr><td>Encías</td><td>Beela Xa’ na’ Laya</td><td>Gums</td></tr>
+<tr><td>Incisivos</td><td>Laya Ruaa yoo</td><td>Incisors</td></tr>
+<tr><td>Colmillos</td><td>Laya beedxe’ / Laya Duxhu’</td><td>Canines</td></tr>
+<tr><td>Muelas</td><td>Laya Guiiche</td><td>Molars</td></tr>
+<tr><td>Epigastrio / Boca del estómago</td><td>Ruaa Ladxidó’</td><td>Epigastrium</td></tr>
+<tr><td>Ombligo</td><td>Xquipi’</td><td>Umbilicus / Navel</td></tr>
+<tr><td>Espalda</td><td>Deche</td><td>Back</td></tr>
+<tr><td>Axila</td><td>Xcuñeede</td><td>Axilla / Armpit</td></tr>
+<tr><td>Vientre / Abdomen</td><td>Xandaani’</td><td>Abdomen / Belly</td></tr>
+<tr><td>Nalga / Glúteo</td><td>Xa’ na’</td><td>Buttock</td></tr>
+<tr><td>Cadera</td><td>Dxita Xa’ na’</td><td>Hip</td></tr>
+<tr><td>Mano</td><td>Ná’</td><td>Hand</td></tr>
+<tr><td>Dedo de la mano</td><td>Bicuini Ná’</td><td>Finger</td></tr>
+<tr><td>Uña de la mano</td><td>Bixuga Ná’</td><td>Fingernail</td></tr>
+<tr><td>Palma de la mano</td><td>La’dxi’ Ná’ / Ndaani’ Ná’</td><td>Palm</td></tr>
+<tr><td>Dorso de la mano</td><td>Deche Ná’</td><td>Back of Hand</td></tr>
+<tr><td>Muñeca</td><td>Yanni Ná’</td><td>Wrist</td></tr>
+<tr><td>Antebrazo</td><td>Dxita Ná’ni</td><td>Forearm</td></tr>
+<tr><td>Pie</td><td>Ñee</td><td>Foot</td></tr>
+<tr><td>Dedo del pie</td><td>Bicuini Ñee</td><td>Toe</td></tr>
+<tr><td>Uña del pie</td><td>Bixuga Ñee</td><td>Toenail</td></tr>
+<tr><td>Planta del pie</td><td>La’dxi’ Ñee</td><td>Sole of Foot</td></tr>
+<tr><td>Empeine del pie</td><td>Deche Ñee</td><td>Instep of Foot</td></tr>
+<tr><td>Talón</td><td>Xatini Ñee</td><td>Heel</td></tr>
+<tr><td>Tobillo</td><td>Yanni Ñee</td><td>Ankle</td></tr>
+<tr><td>Rodilla</td><td>Xibi</td><td>Knee</td></tr>
+<tr><td>Muslo</td><td>Co’re’</td><td>Thigh</td></tr>
+<tr><td>Cráneo</td><td>Bichuga Guique</td><td>Skull / Cranium</td></tr>
+<tr><td>Hueso Parietal</td><td>Dxita Bichuga Guique</td><td>Parietal Bone</td></tr>
+<tr><td>Hueso Frontal</td><td>Dxita Lucuá</td><td>Frontal Bone</td></tr>
+<tr><td>Hueso Orbital</td><td>Dxita Guena Lú</td><td>Orbital Bone</td></tr>
+<tr><td>Hueso Nasal</td><td>Dxita Xii</td><td>Nasal Bone</td></tr>
+<tr><td>Hueso Cigomático / Pómulo</td><td>Dxita tini Lú</td><td>Zygomatic Bone / Cheekbone</td></tr>
+<tr><td>Maxilar Superior</td><td>Dxita Ruaa</td><td>Maxilla / Upper Jaw</td></tr>
+<tr><td>Maxilar Inferior / Mandíbula</td><td>Dxita Xhigui / Dxita Xhaga</td><td>Mandible / Lower Jaw</td></tr>
+<tr><td>Vértebras Cervicales</td><td>Dxita Xayanni</td><td>Cervical Vertebrae</td></tr>
+<tr><td>Cartílago Tiroides / Hioides</td><td>Dxita Yanni</td><td>Laryngeal Cartilage / Hyoid</td></tr>
+<tr><td>Clavícula</td><td>Dxita Bigá Yanni</td><td>Clavicle / Collarbone</td></tr>
+<tr><td>Esternón</td><td>Dxita Biitu Ladxidó’</td><td>Sternum / Breastbone</td></tr>
+<tr><td>Escápula / Omóplato</td><td>Dxita Xi’que’</td><td>Scapula / Shoulder Blade</td></tr>
+<tr><td>Húmero / Radio</td><td>Dxita Tobi Ná’</td><td>Humerus / Radius</td></tr>
+<tr><td>Cúbito</td><td>Dxita Lase’ Ná’</td><td>Ulna</td></tr>
+<tr><td>Falanges de la mano</td><td>Dxita Bicuini Ná’</td><td>Hand Phalanges</td></tr>
+<tr><td>Falanges del pie</td><td>Dxita Bicuini Ñee</td><td>Foot Phalanges</td></tr>
+<tr><td>Costillas</td><td>Dxita ti’xhi’</td><td>Ribs</td></tr>
+<tr><td>Columna Vertebral</td><td>Dxita deche</td><td>Vertebral Column / Spine</td></tr>
+<tr><td>Pelvis</td><td>Dxita Xa’na’</td><td>Pelvis</td></tr>
+<tr><td>Cresta Ilíaca</td><td>Dxita Bitangu X’ana’</td><td>Iliac Crest</td></tr>
+<tr><td>Bíceps / Músculo del brazo</td><td>Bidxi Ná’</td><td>Biceps / Arm Muscle</td></tr>
+<tr><td>Eminencia Tenar (Músculo mano)</td><td>Xatini Ná’</td><td>Thenar Eminence</td></tr>
+<tr><td>Pantorrilla / Gemelos</td><td>Bidxi Ñee</td><td>Calf Muscle / Gastrocnemius</td></tr>
+<tr><td>Tejido Muscular / Carne</td><td>Beela</td><td>Muscle Tissue / Flesh</td></tr>
+<tr><td>Encías (Tejido muscular gingival)</td><td>Beela Xa’ na’ Laya</td><td>Gingival Tissue</td></tr>
+<tr><td>Músculo Cardiaco</td><td>Beela Ladxidó’</td><td>Cardiac Muscle</td></tr>
+<tr><td>Vulva</td><td>Nde’</td><td>Vulva</td></tr>
+<tr><td>Pene</td><td>Xquie’</td><td>Penis</td></tr>
+<tr><td>Glande</td><td>Guique Xquie’</td><td>Glans Penis</td></tr>
+<tr><td>Testículos</td><td>Dxita Xquie’</td><td>Testicles / Testes</td></tr>
+<tr><td>Labio Mayor / Externo Vaginal</td><td>Guidi Ruaa Cue’ Nde’</td><td>Labium Majus</td></tr>
+<tr><td>Labio Menor / Interno Vaginal</td><td>Guidi Ruaa Ndaani’ Nde’</td><td>Labium Minus</td></tr>
+<tr><td>Abertura / Introito Vaginal</td><td>Guiiru’ Nde’</td><td>Vaginal Introitus / Opening</td></tr>
+<tr><td>Monte de Venus</td><td>Lucuá Nde’</td><td>Mons Pubis</td></tr>
+<tr><td>Vello Púbico Femenino</td><td>Guicha Nde’</td><td>Female Pubic Hair</td></tr>
+<tr><td>Vello Púbico Masculino</td><td>Guicha Xquie’</td><td>Male Pubic Hair</td></tr>
+<tr><td>Clítoris</td><td>Biitu Nde’</td><td>Clitoris</td></tr>
+<tr><td>Abertura de la Uretra</td><td>Guiiru’ Xti Neza Xquixhi</td><td>External urethral orifice</td></tr>
+<tr><td>Prepucio</td><td>Guidi Xquie’</td><td>Prepuce</td></tr>
+<tr><td>Escroto</td><td>Guixhe Dxita Xquie’</td><td>Scrotum</td></tr>
+<tr><td>Frenillo</td><td>Guidi doo Yanni Xquie’</td><td>Frenulum preputii</td></tr>
+<tr><td>Meato</td><td>Guiiru’ Xti Neza Xquixhi</td><td>Meatus</td></tr>
+<tr><td>Tronco / Cuerpo</td><td>Yaga Xquie’ / Ladi Xquie’</td><td>Corpus penis</td></tr>
+<tr><td>Ligadura / Torniquete</td><td>Doo laasa</td><td>Tourniquet</td></tr>
+<tr><td>Aguja</td><td>Guichi Guiiba’</td><td>Needle</td></tr>
+<tr><td>Torunda de Algodón</td><td>Pidola Xiaa</td><td>Cotton Swab / Ball</td></tr>
+<tr><td>Piquete / Punción</td><td>Guenda Ribàgu</td><td>Puncture / Stick</td></tr>
+<tr><td>Inyección</td><td>Riaazi Riuu Nisa</td><td>Injection</td></tr>
+<tr><td>Contenedor Rojo de RPBI</td><td>Guena Xiñá’</td><td>Red Biohazard Container (RPBI)</td></tr>
+<tr><td>Bolsa Roja de RPBI</td><td>Gixhe Xiñá’</td><td>Red Biohazard Bag (RPBI)</td></tr>
+<tr><td>Limpieza / Asepsia</td><td>Rusiaá / Ruchaá</td><td>Cleaning / Asepsis</td></tr>
+<tr><td>Desinfección</td><td>Riaazi’ Gui</td><td>Disinfection</td></tr>
+<tr><td>Clavar / Puncionar</td><td>Daabi / Ribí / Ridaabi</td><td>To Puncture / Insert</td></tr>
+<tr><td>Sobar / Palpar</td><td>Ridaabi’</td><td>To Palpate / Massage</td></tr>
+<tr><td>Abrir la boca</td><td>Bixhale’ Ruaa</td><td>Open your mouth</td></tr>
+<tr><td>Cerrar la mano / Hacer puño</td><td>Biibi / Bitaagu’ Ná’</td><td>Make a fist / Close hand</td></tr>
+<tr><td>Abrir la mano</td><td>Bixhale’ Ná’</td><td>Open your hand</td></tr>
+<tr><td>Estirar el brazo</td><td>Bisigaa Ná’</td><td>Extend your arm</td></tr>
+<tr><td>Estirar la pierna</td><td>Bisigaa Ñee</td><td>Extend your leg</td></tr>
+<tr><td>Poner la mano como cuchara</td><td>Guiña Ná’</td><td>Cup your hand</td></tr>
+<tr><td>Cierra / Cerrar</td><td>Bitaagu’</td><td>Close</td></tr>
+<tr><td>Doblar / Flexionar</td><td>Bicuude / Bixeechu</td><td>Bend / Flex</td></tr>
+<tr><td>Respirar</td><td>Ricaa Bii</td><td>Breathe</td></tr>
+<tr><td>Inhalar</td><td>Gucuaa Bii</td><td>Inhale</td></tr>
+<tr><td>Exhalar</td><td>Gulee Bii</td><td>Exhale</td></tr>
+<tr><td>Voltear</td><td>Rutiixhi</td><td>Turn / Rotate</td></tr>
+<tr><td>Girar la cabeza</td><td>Bitiixhi Guique</td><td>Turn your head</td></tr>
+<tr><td>Izquierda</td><td>Biga’</td><td>Left</td></tr>
+<tr><td>Derecha</td><td>Dxùu, Cuàce, Ndí</td><td>Right</td></tr>
+<tr><td>Dolor</td><td>Yuuba’ / Naná</td><td>Pain</td></tr>
+<tr><td>Calentura / Fiebre</td><td>Xindxá’ / Guenda Xindá’</td><td>Fever / Pyrexia</td></tr>
+<tr><td>Enfermedad</td><td>Guenda Huará / Guenda Guidxa’</td><td>Illness / Disease</td></tr>
+<tr><td>Ayuno</td><td>Dxi Pàna / Dxi Ridúna Gueta</td><td>Fasting</td></tr>
+<tr><td>Mareo</td><td>Ridxé Lú / Yooba nayeque guique</td><td>Dizziness / Vertigo</td></tr>
+<tr><td>Desmayo / Síncope</td><td>Dànda la’dxi’ / Riundi’ La’dxi’</td><td>Fainting / Syncope</td></tr>
+<tr><td>Miedo / Ansiedad</td><td>Nadxiibi</td><td>Fear / Anxiety</td></tr>
+<tr><td>Palidez por miedo</td><td>Rigaa Dó’ Lú</td><td>Pallor (from fear)</td></tr>
+<tr><td>Toser / Tos</td><td>Rurú / Rú</td><td>Cough / Coughing</td></tr>
+<tr><td>Estornudar</td><td>Ruxhiaxhi’</td><td>Sneeze</td></tr>
+<tr><td>Muestra Contaminada</td><td>Naxiiñe</td><td>Contaminated Sample</td></tr>
+<tr><td>Muestra Infectada / Podrida</td><td>Ziida’ / Rida’</td><td>Infected / Putrid Sample</td></tr>
+<tr><td>Ardor</td><td>Riana / Raaui’ Goo</td><td>Burning Sensation</td></tr>
+<tr><td>Comezón / Prurito</td><td>ribába</td><td>Itching / Pruritus</td></tr>
+<tr><td>Grano / Furúnculo</td><td>Gui’dxu’</td><td>Furuncle / Pimple</td></tr>
+<tr><td>Salpullido</td><td>Guidxu Gubá</td><td>Rash</td></tr>
+<tr><td>Herpes Zóster</td><td>Guidxu Xhuuni’</td><td>Herpes Zoster / Shingles</td></tr>
+<tr><td>Mordedura</td><td>Ro yaa</td><td>Bite</td></tr>
+<tr><td>Lobanillo / Quiste</td><td>Xicàni</td><td>Cyst / Wens</td></tr>
+<tr><td>Parasitosis / Lombriz</td><td>Biduyu</td><td>Parasite / Worm</td></tr>
+<tr><td>Tubo de extracción sanguínea (Vacutainer)</td><td>Guena lase’ rigu’ba’ rini</td><td>Blood Collection Tube (Vacutainer)</td></tr>
+<tr><td>Alcohol / Torunda alcoholada</td><td>Nisa Nixhu rusiaá / Xiaa ne Nisa</td><td>Alcohol Swab / Antiseptic</td></tr>
+<tr><td>Muestra de Orina de &quot;Chorro Medio&quot;</td><td>Galaasi nisa xquixhi</td><td>Midstream Urine Sample</td></tr>
+<tr><td>Ayuno Estricto de 8 Horas</td><td>Bidúna gueta bia’ti’ xono xigaba</td><td>Strict 8-Hour Fast</td></tr>
+<tr><td>Hemólisis (Ruptura de eritrocitos)</td><td>Ruxuxe rini</td><td>Hemolysis</td></tr>
+<tr><td>Glucosa / Azúcar en Sangre</td><td>Dxíña lu rini</td><td>Blood Glucose</td></tr>
+<tr><td>Citología Vaginal / Papanicolaou</td><td>Ricaa guidi ndaani’ nde’</td><td>Cervical Cytology / Pap Smear</td></tr>
+<tr><td>Espejo Vaginal (Especulo Cuzco)</td><td>Guiiba’ rixhalene’ nde’</td><td>Vaginal Speculum</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<style>
+#vocabulario .vocab-table-wrap{width:100%;overflow-x:auto;margin-top:18px;border:1px solid #d9e5eb;border-radius:12px}
+#vocabulario .vocab-table-clean{width:100%;min-width:620px;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:15px;line-height:1.45}
+#vocabulario .vocab-table-clean th{position:sticky;top:0;background:#123b5d;color:#fff;text-align:left;font-weight:700;padding:14px 16px}
+#vocabulario .vocab-table-clean th:nth-child(1){width:31%}
+#vocabulario .vocab-table-clean th:nth-child(2){width:39%}
+#vocabulario .vocab-table-clean th:nth-child(3){width:30%}
+#vocabulario .vocab-table-clean td{padding:11px 16px;border-bottom:1px solid #e4edf1;vertical-align:top;overflow-wrap:anywhere}
+#vocabulario .vocab-table-clean tbody tr:nth-child(even){background:#f1f7fa}
+#vocabulario .vocab-table-clean tbody tr:hover{background:#e5f1f5}
+#vocabulario .vocab-table-clean tbody tr:last-child td{border-bottom:0}
+@media(max-width:650px){#vocabulario .vocab-table-clean{font-size:13px}#vocabulario .vocab-table-clean th,#vocabulario .vocab-table-clean td{padding:9px 10px}}
+</style>
+
+<style>
+#vocabulario .vocab-content{margin-top:20px}
+#vocabulario .vocab-content h3{margin:26px 0 8px;color:#123b5d}
+#vocabulario .vocab-content p{line-height:1.55}
+#vocabulario .vocab-content .description{color:#526a78}
+#vocabulario .vocab-table{width:100%;border-collapse:collapse;margin:12px 0 24px;font-size:.94rem}
+#vocabulario .vocab-table th,#vocabulario .vocab-table td{padding:10px 12px;border-bottom:1px solid #dce7ed;text-align:left;vertical-align:top}
+#vocabulario .vocab-table th{background:#eaf3f7;color:#123b5d}
+#vocabulario .vocab-table tr:nth-child(even){background:#f7fafb}
+#vocabulario .vocab-content .reference{padding-left:12px}
+@media(max-width:650px){#vocabulario .vocab-table{font-size:.82rem}#vocabulario .vocab-table th,#vocabulario .vocab-table td{padding:7px 6px}}
+</style>
+
+
+</main>
+
+<footer>
+  <p><strong>Voces de la Salud</strong></p>
+  <p>Comunicación intercultural, ciencia y tecnología al servicio de la salud.</p>
+  <p>Grupo 3IM4 · Clínicos</p>
+  <p>Profesor de Física: Santiago Guerrera Sergio Iván</p>
+  <p>CECyT No. 6 “Miguel Othón de Mendizábal”</p>
+</footer>
+</body>
+</html>
